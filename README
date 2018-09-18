@@ -1,0 +1,31 @@
+Программа написана на C++ (main.cpp) , использует поиск информации в строке (string) с помощью STL (find), для работы с файлами используется dirent.h. Поиск исходных файлов проходит рекурсивно, предусмотрена циклическая перегрузка. 
+
+Пример запуска и работы программы:
+
+timur@Path-Light-Panda:~/workspace/Solved_Analyser/Debug$ ./Solved_Analyser ./ -I /home/timur/workspace/Solved_Analyser/Debug/test -I /usr -I /
+abra.cpp
+main.cpp
+..test.h
+..../inside/test4.h
+..test.cpp
+..dirent.h (!)
+..string.h (!)
+..stdio.h (!)
+test.cpp
+test.cpp
+
+/inside/test4.h 1
+dirent.h 1
+stdio.h 1
+string.h 1
+test.cpp 1
+test.h 1
+abra.cpp 0
+main.cpp 0
+timur@Path-Light-Panda:~/workspace/Solved_Analyser/Debug$ 
+
+Программа сортирует вывод.
+Написанна в среде Eclipse (gcc), тестировалась на Linux.
+
+Copyright  2013
+
